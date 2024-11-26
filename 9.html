@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+// 生成一个1到100之间的随机数
+var a = Math.floor(Math.random() * 100) + 1;
+var c =0;
+while (c!== a){
+var c=parseInt(prompt('猜一猜这个数字是多少?'));
+if (c==a) {
+ alert('恭喜你！猜对了')
+}else if (c>a){
+    alert('猜大了哦')
+}else if (c<a){
+    alert('猜小了哦')
+}
+}
+</script>
+</html>
