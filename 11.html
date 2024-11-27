@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+var s = prompt("请输入一个整数:");
+ 
+ // 检查输入是否为数字且为整数
+ if (!isNaN(s) && Number.isInteger(parseInt(s))) {
+   var num = parseInt(s);
+   var sum = 0;
+   for (var i = 1; i <= num / 2; i++) {
+     if (num % i === 0) {
+       sum += i;
+     }
+   }
+   if (sum === num) {
+     console.log(num + " 是完数");
+   } else {
+     console.log(num + " 不是完数");
+   }
+ } else {
+   console.log("输入不是有效的整数");
+ }
+</script>
+</html>

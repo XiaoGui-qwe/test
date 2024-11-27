@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script> 
+var sum = 0;
+var highestScore = 0;
+var score;
+while (true) {
+  score = parseFloat(prompt('请输入学生成绩（输入 0 结束输入）：', ''));
+  
+  if (score === 0) {
+    break; 
+  }
+  
+  if (isNaN(score)) {
+    alert('非法输入，请输入有效的数字！');
+    continue; 
+  }
+  
+  sum += score; // 累加成绩
+  highestScore = Math.max(highestScore, score); // 更新最高分
+}
+ 
+// 计算平均分
+var average = sum / (score !== 0 ? score : 1);
+ 
+// 输出结果
+alert(`平均分：${average.toFixed(2)}，最高分：${highestScore.toFixed(2)}`);
+</script>
+</html>
